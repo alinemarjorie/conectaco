@@ -1,28 +1,51 @@
-const Products = {
-    "item": [{
-            "title": "Beija Eu",
-            "artist": "Pedro Garzia",
-            "image": "https://i.imgur.com/cojZbbc.png",
-            "min_price": "500",
-        },
-        {
-            "title": "Where The Crawdads Sing",
-            "artist": "Delia Owens",
-            "image": "https://i.imgur.com/3DPjhVy.png",
-            "min_price": "800",
-        }
-    ]
-}
+let productsTest = [{
+    "oi": "oi",
+    "tchau": "bye"
+}]
 
-const myJson = JSON.stringify(Products);
+const myJson = JSON.stringify(productsTest);
 console.log(myJson);
-
 localStorage.setItem('myjson', myJson);
 
-function checkout(nome) {
-    window.location = '../checkout/checkout.html';
-    console.log(nome);    
+let btnCard = document.getElementById("btn-save-card");
+
+window.onload = () => {
+    getProductsData();
+    btnCard.addEventListener("click", () => {
+      saveCard();
+      showCard();
+    })
 }
+
+const getProductsData = () => {
+    let productsString = localStorage.getItem('myjson');
+    let products = JSON.parse(productsString);
+    printCart(products);
+}
+
+const printCart = (products) => {
+    let cart = document.getElementById("cart");
+    cart.innerHTML = 
+    `
+    <p>Produto 1</p>
+    `
+}
+
+const saveCard = () => {
+    let cardName = document.getElementById("card_holder_name");
+    let cardNumber = document.getElementById("card_number");
+    let cardDate = document.getElementById("card_expiration_date");
+    let cardCvv = document.getElementById("card_cvv");
+}
+
+const showCard = () => {
+    let cardNumber = document.getElementById("card_number");
+    document.getElementById("credit-card-info").innerHTML = cardNumber.value;
+}
+
+
+
+
 
 function teste() {
 pagarme.client.connect({ api_key: 'ak_test_xBdmMN5Q2uncFMSWAlIVFais1nGkMv' })
