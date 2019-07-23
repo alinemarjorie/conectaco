@@ -1,40 +1,13 @@
-const Products = {
-    "item": [{
-            "title": "Beija Eu",
-            "artist": "Pedro Garzia",
-            "image": "https://i.imgur.com/cojZbbc.png",
-            "min_price": "500",
-        },
-        {
-            "title": "Where The Crawdads Sing",
-            "artist": "Delia Owens",
-            "image": "https://i.imgur.com/3DPjhVy.png",
-            "min_price": "800",
-        }
-    ]
-}
-
-const myJson = JSON.stringify(Products);
-console.log(myJson);
-
-localStorage.setItem('myjson', myJson);
-
-function checkout(nome) {
-    window.location = '../checkout/checkout.html';
-    console.log(nome);    
-}
-
-function teste() {
-pagarme.client.connect({ api_key: 'ak_test_xBdmMN5Q2uncFMSWAlIVFais1nGkMv' })
-  .then(client => client.transactions.create({
-    "amount": teste2,
+{
+    "api_key": "ak_test_xBdmMN5Q2uncFMSWAlIVFais1nGkMv",
+    "amount": 300,
     "card_number": "4111111111111111",
     "card_cvv": "123",
     "card_expiration_date": "0922",
     "card_holder_name": "Morpheus Fishburne2",
     "customer": {
         "external_id": "#3311",
-        "name": "teste2",
+        "name": "Cliente teste",
         "type": "individual",
         "country": "br",
         "email": "mopheus@nabucodonozor.com",
@@ -116,9 +89,4 @@ pagarme.client.connect({ api_key: 'ak_test_xBdmMN5Q2uncFMSWAlIVFais1nGkMv' })
             "charge_remainder_fee": "true"
         }
     ]
-}))
-  .then(transaction => console.log(transaction))
 }
-
-
-
