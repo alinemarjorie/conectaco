@@ -1,0 +1,23 @@
+.logo {
+    width: 12vw;
+}
+
+#productList {
+    margin: 0vh 0vw 8vh 0vw;
+}
+
+.card-title {
+    font-family: 'Heebo', sans-serif;
+}
+
+.artist {
+    font-family: 'Roboto', sans-serif;
+}
+
+.price {
+    font-family: 'Roboto', sans-serif;
+}
+
+.about {
+    margin: 0vh 0vw 12vh 0vw;
+}
