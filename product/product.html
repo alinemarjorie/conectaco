@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700,800|Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="product.css">
     <title>Conecta Co</title>
 </head>
 
@@ -14,42 +15,54 @@
 </navbar>
 
 <body>
-    <div class="container">
+    <div class="container whole">
         <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="../img/artist6.png" alt="Card image cap">
+            <div class="col d-flex justify-content-center">
+                <div class="card">
+                    <img class="card-img-top" src="../src/images/artist.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title" data-name="Beija Eu" id="product">Característica</h5>
-                        <p class="card-text">Sobre</p>
-                        <p class="card-text">Valor mínimo</p>
+                        <h5 class="card-title" data-name="Beija Eu" id="product">Beija Eu</h5>
+                        <p class="card-text">Pedro Garzia</p>
+                        <p class="card-text">Valor mínimo: R$ 5,00</p>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <form>
-                    <h1>Quanto você quer pagar?</h1>
+            <div class="col d-flex flex-column">
+                <div class="container justify-content-between">
                     <div class="row">
-                        <div class="col">
-                            <label for="provider" >Artista</label>
-                            <input type="text" data-artist="re_cjyg0bwpg00l7dh6dzj9ws984" id="provider-value" class="form-control" placeholder="Digite o valor">
-                        </div>
-                        <div class="col">
-                            <label for="platform">Plataforma</label>
-                            <input type="text" id="platform-value" class="form-control" placeholder="Digite o valor">
-                        </div>
-                        <div class="col">
-                            <label for="provider">Instituição</label>
-                            <input type="text" id="donation-value" class="form-control" placeholder="Digite o valor">
-                        </div>
+                        <h4 class="text-align-center">Quanto você quer pagar?</h4>
                     </div>
-                </form>
-                <button class="btn btn-primary" id="cart">Adicionar no carrinho</button>
-                <button class="btn btn-primary" id="buy-now">Comprar Agora</button>
+                    <div class="row">
+                        <form class="flex-column">
+                            <div class="col">
+                                <label for="provider">Artista</label>
+                                <input type="text" data-artist="re_cjyg0bwpg00l7dh6dzj9ws984" id="provider-value" class="form-control" placeholder="Digite o valor">
+                            </div>
+                            <div class="col">
+                                <label for="platform">Plataforma</label>
+                                <input type="text" id="platform-value" class="form-control" placeholder="Digite o valor">
+                            </div>
+                            <div class="col">
+                                <label for="provider">Instituição</label>
+                                <input type="text" id="donation-value" class="form-control" placeholder="Digite o valor">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-primary flex-column justify-content-center" id="cart">Adicionar no carrinho</button>
+                        <button class="btn btn-primary flex-column justify-content-center" id="buy-now">Comprar Agora</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <footer class="navbar navbar-fixed-bottom footer-nav">
+        <div class="col-12 text-center align-content-center">
+            <p class="footer-slogan">DIVIDIR, CONFIAR E CONQUISTAR.</p>
+        </div>
+    </footer>
 </body>
 
 <script src="product.js"></script>
+
 </html>
