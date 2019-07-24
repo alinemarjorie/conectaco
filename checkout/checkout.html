@@ -1,58 +1,99 @@
 <!DOCTYPE html>
 <html lang="eng">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./checkout.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./checkout.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/7b2b8b660e.js"></script>
     <title>Conecta Co</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <header class="d-flex justify-content-between align-items-center">
+      <div class="icon">
+        <i class="fa fa-undo-alt icon-undo pl-3"></i>
+      </div>
+      <div class="logo">
+        <img src="../checkout/images/Conecta Co..png" alt="Logo Conecta Co." class="logo-conecta" />
+      </div>
+    </header>
 
-    <section id="cart"></section>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#credit-card">
-        Adicionar cartão
-    </button>
+    <div class="font-cart d-flex flex-column">
+      <div class="d-flex justify-content-center">
+        <p>Seu carrinho de compras</p>
+      </div>
+      <p>Detalhes:</p>
+      <section id="cart"></section>
+      <p class="">TOTAL A PAGAR:</p>
+    </div>
     <section id="credit-card-info"></section>
-    <button type="button" class="btn btn-primary" id="btn-finish">
-        Finalizar compra
-    </button>
-
-    <div class="modal fade" id="credit-card" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Dados do cartão de crédito</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <input placeholder="Nome" id="card_holder_name">
-                        <input placeholder="Validade" id="card_expiration_date">
-                        <input placeholder="Número do cartão" id="card_number">
-                        <input placeholder="CVV" id="card_cvv">
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button id="btn-save-card" type="button" class="btn btn-primary" data-dismiss="modal">Salvar dados</button>
-                </div>
-            </div>
-        </div>
+    <div class="d-flex flex-column">
+      <div>
+        <button type="button" class="btn-card pt-1 pb-1 pr-4 pl-4 mb-2" data-toggle="modal" data-target="#credit-card">
+          <i class="far fa-credit-card icon-color pr-2"></i>Adicionar cartão
+        </button>
+      </div>
+      <div>
+        <button type="button" class="btn-card pt-1 pb-1 pr-4 pl-4" id="btn-finish">
+          <i class="far fa-sticky-note icon-color pr-2"></i> Finalizar compra
+        </button>
+      </div>
     </div>
 
-    
+    <div
+      class="modal fade"
+      id="credit-card"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Dados do cartão de crédito</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <input placeholder="Nome" id="card_holder_name" />
+              <input placeholder="Validade" id="card_expiration_date" />
+              <input placeholder="Número do cartão" id="card_number" />
+              <input placeholder="CVV" id="card_cvv" />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="btn-save-card" type="button" class="btn btn-primary" data-dismiss="modal">Salvar dados</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./checkout.js"></script>
     <script src="https://assets.pagar.me/pagarme-js/4.4/pagarme.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

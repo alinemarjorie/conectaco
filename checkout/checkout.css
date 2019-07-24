@@ -1,0 +1,38 @@
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Heebo|Roboto&display=swap");
+
+.icon-undo {
+  width: 100px;
+}
+
+.icon-color {
+  color: #a7bf30;
+}
+
+.logo-conecta {
+  width: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sumary {
+  list-style-type: none;
+}
+
+.btn-card {
+  color: #bf3060;
+  background-color: #ffffff;
+  border: solid 1px #545454;
+  border-radius: 5px;
+  max-width: 220px;
+  font-weight: bold;
+}
+
+.font-cart {
+  font-weight: bold;
+  color: #545454;
+}
