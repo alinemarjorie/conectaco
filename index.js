@@ -13,7 +13,7 @@ const allProducts = (items) => {
             <div class="card mb-5 mr-5">
               <img class="card-img-top img-responsive" src="${item["image"]}" alt="product image">
               <div class="card-body">
-                  <h5 class="card-title">${item["title"]}</h5>
+                  <h5 class="card-title product-title">${item["title"]}</h5>
                   <p class="card-text artist">${item["artist"]}</p>
                   <p class="card-text price">Valor mínimo: R$${item["min_price"]}</p>
               </div>
@@ -30,7 +30,7 @@ const allPartners = (partners) => {
             <div class="card mb-5 mr-5">
               <img class="card-img-top img-responsive" src="${partner["image"]}" alt="product image">
               <div class="card-body">
-                <h5 class="card-title text-center">${partner["name"]}</h5>
+                <h6 class="card-title text-center partner-name">${partner["name"]}</h6>
               </div>
             </div>
           </div>

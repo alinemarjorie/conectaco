@@ -2,22 +2,55 @@
     width: 12vw;
 }
 
-#productList {
+.product-session {
     margin: 0vh 0vw 8vh 0vw;
 }
 
-.card-title {
+.product-title {
     font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+    margin: 0;
 }
 
 .artist {
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 .price {
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.sub-title {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
 }
 
 .about {
-    margin: 0vh 0vw 12vh 0vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.partners {
+    margin: 12vh 0vw 0vh 0vw;
+}
+
+.partner-name {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+}
+
+.footer-nav {
+    height: 5vh;
+    background-color: #A7C030;
+    margin-bottom: 0;
+}
+
+.footer-slogan {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+    font-size: 1vw;
+    color: #BF2F60;
+    margin: 0;
 }
