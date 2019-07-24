@@ -1,13 +1,20 @@
+header {
+    display: flex;
+    flex-direction: row;
+}
+
 body {
     background-color: #ffffff;
 }
 
 .logo {
-    width: 25vw;
+    width: 15vw;
 }
 
 .cart {
     color: #bf3060;
+    width: 15vw;
+    padding: 60px 0 0 0;
 }
 
 .green-text {
