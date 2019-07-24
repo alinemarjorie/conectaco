@@ -8,49 +8,53 @@ console.log(myJson);
 localStorage.setItem('myjson', myJson);
 
 let btnCard = document.getElementById("btn-save-card");
+let btnfinish = document.getElementById("btn-finish")
 
 window.onload = () => {
-    getProductsData();
+    printCart();
     btnCard.addEventListener("click", () => {
       saveCard();
       showCard();
     })
+    btnfinish.addEventListener("click", finishPurchase)
 }
 
 const getProductsData = () => {
     let productsString = localStorage.getItem('myjson');
     let products = JSON.parse(productsString);
-    printCart(products);
+    return products
 }
 
-const printCart = (products) => {
+const printCart = () => {
+    let products = getProductsData();
     let cart = document.getElementById("cart");
     cart.innerHTML = 
     `
-    <p>Produto 1</p>
+    <p>Produto 1: ${products}</p>
     `
 }
 
 const saveCard = () => {
-    let cardName = document.getElementById("card_holder_name");
-    let cardNumber = document.getElementById("card_number");
-    let cardDate = document.getElementById("card_expiration_date");
-    let cardCvv = document.getElementById("card_cvv");
+    let cardName = document.getElementById("card_holder_name").value;
+    let cardNumber = document.getElementById("card_number").value;
+    let cardDate = document.getElementById("card_expiration_date").value;
+    let cardCvv = document.getElementById("card_cvv").value;
+    return [cardName, cardNumber, cardDate, cardCvv];
 }
 
 const showCard = () => {
-    let cardNumber = document.getElementById("card_number");
-    document.getElementById("credit-card-info").innerHTML = cardNumber.value;
+    let cardNumber = document.getElementById("card_number").value;
+    document.getElementById("credit-card-info").innerHTML = cardNumber;
 }
 
+const finishPurchase = () => {
 
-
-
+}
 
 function teste() {
 pagarme.client.connect({ api_key: 'ak_test_xBdmMN5Q2uncFMSWAlIVFais1nGkMv' })
   .then(client => client.transactions.create({
-    "amount": teste2,
+    "amount": 300,
     "card_number": "4111111111111111",
     "card_cvv": "123",
     "card_expiration_date": "0922",

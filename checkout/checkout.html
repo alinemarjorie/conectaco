@@ -16,6 +16,9 @@
         Adicionar cartão
     </button>
     <section id="credit-card-info"></section>
+    <button type="button" class="btn btn-primary" id="btn-finish">
+        Finalizar compra
+    </button>
 
     <div class="modal fade" id="credit-card" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
@@ -37,11 +40,13 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button id="btn-save-card" type="button" class="btn btn-primary">Salvar dados</button>
+                    <button id="btn-save-card" type="button" class="btn btn-primary" data-dismiss="modal">Salvar dados</button>
                 </div>
             </div>
         </div>
     </div>
+
+    
 
     <script src="./checkout.js"></script>
     <script src="https://assets.pagar.me/pagarme-js/4.4/pagarme.min.js"></script>
