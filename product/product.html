@@ -20,7 +20,7 @@
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="../img/artist6.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title" id="product">Característica</h5>
+                        <h5 class="card-title" data-name="Beija Eu" id="product">Característica</h5>
                         <p class="card-text">Sobre</p>
                         <p class="card-text">Valor mínimo</p>
                     </div>
@@ -31,8 +31,8 @@
                     <h1>Quanto você quer pagar?</h1>
                     <div class="row">
                         <div class="col">
-                            <label for="provider">Artista</label>
-                            <input type="text" id="provider-value" class="form-control" placeholder="Digite o valor">
+                            <label for="provider" >Artista</label>
+                            <input type="text" data-artist="re_cjyg0bwpg00l7dh6dzj9ws984" id="provider-value" class="form-control" placeholder="Digite o valor">
                         </div>
                         <div class="col">
                             <label for="platform">Plataforma</label>
@@ -44,10 +44,12 @@
                         </div>
                     </div>
                 </form>
-                <a href="#" class="btn btn-primary" id="kart">Adicionar no carrinho</a>
-                <a href="#" class="btn btn-primary" id="buy-now">Comprar Agora</a>
+                <button class="btn btn-primary" id="cart">Adicionar no carrinho</button>
+                <button class="btn btn-primary" id="buy-now">Comprar Agora</button>
             </div>
         </div>
     </div>
-
 </body>
+
+<script src="product.js"></script>
+</html>
