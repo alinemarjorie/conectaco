@@ -2,6 +2,7 @@ const Products = {
     "item": [{
             "title": "Beija Eu",
             "artist": "Pedro Garzia",
+            "id": "re_cjyg0bwpg00l7dh6dzj9ws984",
             "image": "./src/images/artist.png",
             "min_price": "5,00",
         },

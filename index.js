@@ -1,9 +1,7 @@
 const items = Products["item"];
-const partners = Ongs["logo"];
 
 window.onload = () => {
     allProducts(items);
-    allPartners(partners);
 }
 
 const allProducts = (items) => {
@@ -21,19 +19,4 @@ const allProducts = (items) => {
           </div>
       `).join('')}
     `
-}
-
-const allPartners = (partners) => {
-  ongList.innerHTML = `
-  ${partners.map(partner => `
-          <div class="card-deck">
-            <div class="card mb-5 mr-5">
-              <img class="card-img-top img-responsive" src="${partner["image"]}" alt="product image">
-              <div class="card-body">
-                <h6 class="card-title text-center partner-name">${partner["name"]}</h6>
-              </div>
-            </div>
-          </div>
-    `).join('')}
-  `
 }
