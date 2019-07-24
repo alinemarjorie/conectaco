@@ -1,44 +1,95 @@
+body {
+    background-color: #ffffff;
+}
+
 .logo {
-    width: 12vw;
+    width: 25vw;
 }
 
-.product-session {
-    margin: 0vh 0vw 8vh 0vw;
+.cart {
+    color: #bf3060;
 }
 
-.product-title {
-    font-family: 'Heebo', sans-serif;
-    font-weight: 700;
-    margin: 0;
+.green-text {
+    color: #a7bf30;
+    text-shadow: 1px 1px 0px rgba(150, 150, 150, 0.96);
 }
 
-.artist {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-}
-
-.price {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+.pink-text {
+    color: #bf3060;
+    text-shadow: 1px 1px 0px rgba(150, 150, 150, 0.96);
 }
 
 .sub-title {
     font-family: 'Heebo', sans-serif;
     font-weight: 700;
+    margin: 4vh 0vw 0vh 0vw;
+    font-size: 4.5vw;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.96);
+}
+
+.sub {
+    font-size: 4.5vw;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+    margin: 4vh 0vw 0vh 0vw;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.96);
 }
 
 .about {
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
+    margin: 4vh 0vw 15vh 0vw;
 }
 
-.partners {
-    margin: 12vh 0vw 0vh 0vw;
+.name {
+    font-weight: 700;
+    text-shadow: 1px 1px 0px rgba(150, 150, 150, 0.96);
 }
 
-.partner-name {
+.products {
     font-family: 'Heebo', sans-serif;
     font-weight: 700;
+    margin: 0;
+    text-shadow: 1px 1px 0px rgba(150, 150, 150, 0.96);
+}
+
+.product-session {
+    margin: 0vh 0vw 2vh 0vw;
+}
+
+.card {
+    -webkit-box-shadow: 19px 26px 65px -46px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 19px 26px 65px -46px rgba(0, 0, 0, 0.72);
+    box-shadow: 19px 26px 65px -46px rgba(0, 0, 0, 0.72);
+}
+
+.card-img-top {
+    -webkit-filter: blur(0.3px);
+    /* Safari 6.0 - 9.0 */
+    filter: blur(0.3px);
+    -webkit-filter: contrast(1.1);
+    filter: contrast(1.1);
+    -webkit-filter: brightness(1.1);
+    filter: brightness(1.1);
+}
+
+.product-title {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.36);
+}
+
+.artist {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.36);
+}
+
+.price {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.36);
 }
 
 .footer-nav {
@@ -50,7 +101,107 @@
 .footer-slogan {
     font-family: 'Heebo', sans-serif;
     font-weight: 700;
-    font-size: 1vw;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.96);
+    font-size: 2vw;
     color: #BF2F60;
     margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .sub-title {
+        font-family: 'Heebo', sans-serif;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.96);
+        margin: 4vh 0vw 0vh 0vw;
+        font-size: 3.5vw;
+    }
+    .sub {
+        font-size: 3.5vw;
+        text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.96);
+        font-family: 'Heebo', sans-serif;
+        font-weight: 700;
+        margin: 4vh 0vw 0vh 0vw;
+    }
+    .about {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 3vw;
+        margin: 4vh 0vw 15vh 0vw;
+    }
+    .footer-slogan {
+        font-family: 'Heebo', sans-serif;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.96);
+        font-size: 2vw;
+        color: #BF2F60;
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .logo {
+        width: 18vw;
+    }
+    .sub-title {
+        font-family: 'Heebo', sans-serif;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.96);
+        margin: 6vh 0vw 0vh 0vw;
+        font-size: 4vw;
+    }
+    .sub {
+        font-size: 4vw;
+        font-family: 'Heebo', sans-serif;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.96);
+        margin: 6vh 0vw 0vh 0vw;
+    }
+    .about {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 3.5vw;
+        margin: 4vh 0vw 15vh 0vw;
+    }
+    .footer-slogan {
+        font-family: 'Heebo', sans-serif;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.96);
+        font-size: 1vw;
+        color: #BF2F60;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo {
+        width: 13vw;
+    }
+    .sub-title {
+        font-family: 'Heebo', sans-serif;
+        font-weight: 700;
+        text-shadow: 1px 1px 3px rgba(150, 150, 150, 0.96);
+        margin: 3vh 0vw 0vh 0vw;
+        font-size: 3vw;
+    }
+    .sub {
+        font-size: 2.9vw;
+        font-family: 'Heebo', sans-serif;
+        font-weight: 700;
+        text-shadow: 1px 1px 3px rgba(150, 150, 150, 0.96);
+        margin: 6vh 0vw 0vh 0vw;
+    }
+    .about {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 1.5vw;
+        margin: 3vh 0vw 15vh 0vw;
+    }
+    .footer-slogan {
+        font-family: 'Heebo', sans-serif;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.96);
+        font-size: 1vw;
+        color: #BF2F60;
+        margin: 0;
+    }
 }
