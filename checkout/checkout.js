@@ -16,7 +16,6 @@
 // ];
 
 // const myJson = JSON.stringify(productsTest);
-// console.log(myJson);
 // localStorage.setItem("cart", myJson);
 
 let btnCard = document.getElementById("btn-save-card");
@@ -37,12 +36,9 @@ const getProductsData = () => {
   return products;
 };
 
-
 const printCart = () => {
   let products = getProductsData();
   let cart = document.getElementById("cart");
-  
-  
   products.map((product) => {
     let productDiv = document.createElement("div");    
     cart.appendChild(productDiv);
@@ -56,7 +52,6 @@ const printCart = () => {
     </ul>
     `;
   })
-
   let sumProduct = products.map((product) => {
     let sum = product.value_provider + product.value_platform + product.value_donation
     return sum
@@ -85,31 +80,15 @@ const finishPurchase = () => {
   let cardNumber = cardInfos[1].toString();
   let cardDate = cardInfos[2].toString();
   let cardCvv= cardInfos[3].toString();
-
   let products = getProductsData();
-
   let sumProduct = products.map((product) => {
     let sum = product.value_provider + product.value_platform + product.value_donation
     return sum
   })
   let sumProducts = sumProduct.reduce((acc, cur) => acc + cur);
-
   let sumArtist = products.map((product) => {return product.value_provider}).reduce((acc, cur) => acc + cur);
   let sumPlatform = products.map((product) => {return product.value_platform}).reduce((acc, cur) => acc + cur);
   let sumDonation = products.map((product) => {return product.value_donation}).reduce((acc, cur) => acc + cur);
-
-  console.log(cardName);
-  console.log(cardNumber);
-  console.log(cardDate);
-  console.log(cardCvv);
-
-  console.log(sumProducts);
-  console.log(sumArtist);
-  console.log(sumPlatform);
-  console.log(sumDonation);
-
-
-
   pagarme.client
     .connect({ api_key: "ak_test_xBdmMN5Q2uncFMSWAlIVFais1nGkMv" })
     .then(client =>
@@ -202,5 +181,8 @@ const finishPurchase = () => {
         ]
       })
     )
-    .then(transaction => console.log(transaction));
+    .then(() => {
+      alert("Compra realizada com sucesso!");
+    })
+    ;
 }
